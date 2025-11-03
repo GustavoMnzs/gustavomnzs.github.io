@@ -53,7 +53,6 @@ const Projects = () => {
             {projects.map((project, index) => (
               <Card
                 key={project.name}
-                data-cursor-hover
                 className="group relative overflow-hidden border-border/50 bg-card/80 backdrop-blur-sm hover:border-primary/50 transition-all duration-500 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
