@@ -10,36 +10,30 @@ const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="max-w-6xl mx-auto text-center space-y-10 animate-fade-in-up">
-          <div className="space-y-8">
-            <h1 className="text-7xl md:text-[8rem] font-bold tracking-tight leading-none">
+        <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in-up">
+          <div className="space-y-6">
+            <h1 className="text-6xl md:text-8xl font-semibold tracking-tight leading-none">
               Gustavo{" "}
-              <span className="block md:inline text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/70">
+              <span className="text-primary">
                 Menezes
               </span>
             </h1>
 
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-5xl font-semibold text-foreground tracking-tight">
-                Desenvolvedor Front-End{" "}
-                <span className="text-primary">Pleno</span>
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground/80 max-w-3xl mx-auto leading-relaxed font-light">
-                Especializado em WordPress/Elementor, com foco em{" "}
-                <span className="text-foreground font-medium">performance</span>,{" "}
-                <span className="text-foreground font-medium">UX</span> e{" "}
-                <span className="text-foreground font-medium">conversão</span>.
-                <br className="hidden md:block" />
-                Transformando ideias em sites modernos, rápidos e otimizados.
-              </p>
-            </div>
+            <h2 className="text-2xl md:text-4xl font-medium text-muted-foreground tracking-tight">
+              Desenvolvedor Front-End{" "}
+              <span className="text-primary font-semibold">Pleno</span>
+            </h2>
+            
+            <p className="text-base md:text-lg text-muted-foreground/70 max-w-2xl mx-auto leading-relaxed">
+              Especializado em WordPress/Elementor · Performance · UX · Conversão
+            </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <Button
               size="lg"
               onClick={() => scrollToSection("projects")}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-500 text-base px-10 py-7 rounded-2xl shadow-lg hover:shadow-[0_0_40px_hsl(180,70%,55%,0.4)] font-medium"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_20px_50px_hsl(189,100%,50%,0.3)] transition-all duration-300 text-base px-8 py-6 rounded-xl font-medium"
             >
               Ver Projetos
             </Button>
@@ -47,7 +41,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("contact")}
-              className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-500 text-base px-10 py-7 rounded-2xl backdrop-blur-sm font-medium"
+              className="border-border/50 text-foreground hover:bg-card hover:border-primary/30 transition-all duration-300 text-base px-8 py-6 rounded-xl backdrop-blur-sm font-medium"
             >
               Entrar em Contato
             </Button>
@@ -56,11 +50,11 @@ const Hero = () => {
           {/* Scroll indicator */}
           <div 
             onClick={() => scrollToSection("services")}
-            className="flex flex-col items-center gap-3 mt-20 cursor-pointer group"
+            className="flex flex-col items-center gap-3 mt-16 cursor-pointer group"
           >
-            <span className="text-xs font-light text-muted-foreground/60 group-hover:text-primary/80 transition-colors duration-500 tracking-wider uppercase">Scroll</span>
+            <span className="text-xs font-light text-muted-foreground/50 group-hover:text-primary transition-colors duration-300 tracking-wider uppercase">Scroll</span>
             <div className="animate-bounce">
-              <ArrowDown className="w-4 h-4 text-muted-foreground/60 group-hover:text-primary/80 transition-colors duration-500" />
+              <ArrowDown className="w-4 h-4 text-muted-foreground/50 group-hover:text-primary transition-colors duration-300" />
             </div>
           </div>
         </div>

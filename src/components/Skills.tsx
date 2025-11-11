@@ -39,13 +39,13 @@ const Skills = () => {
     <section id="skills" className="py-32 relative scroll-fade-section bg-secondary/20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-24 animate-fade-in">
-            <h2 className="text-primary text-sm mb-8 tracking-[0.3em] uppercase font-semibold">
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="text-primary text-xs mb-6 tracking-[0.25em] uppercase font-semibold">
               Competências
             </h2>
-            <p className="text-5xl md:text-7xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
+            <p className="text-4xl md:text-6xl font-semibold text-foreground leading-tight max-w-4xl mx-auto">
               Tecnologias e{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">
+              <span className="text-primary">
                 Habilidades
               </span>
             </p>
@@ -55,20 +55,20 @@ const Skills = () => {
             {skillCategories.map((category, index) => (
               <Card
                 key={category.title}
-                className="group relative overflow-hidden border-2 border-border/40 bg-card/40 backdrop-blur-xl hover:border-primary/50 hover-lift transition-all duration-500 animate-fade-in-up shadow-xl hover:shadow-2xl hover:shadow-primary/10"
+                className="group relative overflow-hidden border border-border/50 bg-card/50 backdrop-blur-xl hover:border-primary/40 hover:bg-card/70 transition-all duration-300 animate-fade-in-up hover:shadow-[0_8px_30px_hsl(189,100%,50%,0.12)]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent" />
+                {/* Subtle glow on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent" />
                 </div>
 
-                <CardContent className="p-8 space-y-6 relative">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-primary/20">
-                      <category.icon className="w-7 h-7 text-primary" />
+                <CardContent className="p-7 space-y-5 relative">
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
+                      <category.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-500">
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                       {category.title}
                     </h3>
                   </div>
@@ -77,7 +77,7 @@ const Skills = () => {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1.5 text-sm bg-primary/5 text-foreground/80 rounded-lg border border-primary/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300 font-medium"
+                        className="px-3 py-1.5 text-sm bg-primary/5 text-foreground/70 rounded-lg border border-primary/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300"
                       >
                         {skill}
                       </span>
